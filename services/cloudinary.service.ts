@@ -1,5 +1,5 @@
 import { ImageCloudinary } from '@/types/ImageCloudinary';
-import cloudinary from '@/utils/cloudinaty';
+import cloudinary from '@/utils/cloudinary';
 
 const getPhotographyGallery = async (): Promise<ImageCloudinary[]> => {
   try {

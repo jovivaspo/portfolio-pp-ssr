@@ -105,13 +105,13 @@ export const DesignGallery = () => {
               {block.items.map((item, index) => {
                 if (item.includes('mp4')) {
                   return (
-                    <div className='w-full h-full '>
+                    <div className='w-full h-full ' key={index}>
                       <video key={index} src={item} controls className='w-full h-full object-cover' />
                     </div>
                   );
                 }
                 return (
-                  <div className='w-full h-full '>
+                  <div className='w-full h-full ' key={index}>
                     <img key={index} src={item} loading='lazy' className='w-full h-full object-cover' />
                   </div>
                 );
