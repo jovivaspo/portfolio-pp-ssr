@@ -1,6 +1,6 @@
-import { FlickrIcon } from '@/components/icons/FlickrIcon.icon';
-import { GmailIcon } from '@/components/icons/Gmail.icon';
-import { LinkdinIcon } from '@/components/icons/Linkedin.icon';
+import { FlickrIcon } from '@/components/moleculas/icons/FlickrIcon.icon';
+import { GmailIcon } from '@/components/moleculas/icons/Gmail.icon';
+import { LinkdinIcon } from '@/components/moleculas/icons/Linkedin.icon';
 import Link from 'next/link';
 const menuFooter = [
   {

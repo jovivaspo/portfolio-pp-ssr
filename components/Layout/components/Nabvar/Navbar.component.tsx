@@ -4,9 +4,9 @@ import clsx from 'clsx';
 import NextLink from 'next/link';
 
 import { Logo } from '@/components/icons';
-import { FlickrIcon } from '@/components/icons/FlickrIcon.icon';
-import { GmailIcon } from '@/components/icons/Gmail.icon';
-import { LinkdinIcon } from '@/components/icons/Linkedin.icon';
+import { FlickrIcon } from '@/components/moleculas/icons/FlickrIcon.icon';
+import { GmailIcon } from '@/components/moleculas/icons/Gmail.icon';
+import { LinkdinIcon } from '@/components/moleculas/icons/Linkedin.icon';
 import { ThemeSwitch } from '@/components/theme-switch';
 import { siteConfig } from '@/config/site';
 import { NavItemWithChildren } from '@/models/config/site';
@@ -22,11 +22,11 @@ export const Navbar = () => {
             <p className='font-bold text-inherit'>PP_</p>
           </NextLink>
         </NavbarBrand>
-        <ul className='hidden lg:flex gap-4 justify-start ml-2'>
+        <ul className='hidden lg:flex gap-8 justify-start ml-2'>
           {siteConfig.navItems.map((item) =>
             !item?.children?.length ? (
               <NavbarItem key={item.label}>
-                <NextLink className={clsx(linkStyles({ color: 'foreground' }), 'data-[active=true]:text-primary data-[active=true]:font-medium')} color='foreground' href={item.href}>
+                <NextLink className={clsx(linkStyles({ color: 'foreground' }), 'data-[active=true]:text-primary data-[active=true]:font-medium uppercase')} color='foreground' href={item.href}>
                   {item.label}
                 </NextLink>
               </NavbarItem>
@@ -47,7 +47,11 @@ export const Navbar = () => {
           {siteConfig.navItems.map((item) =>
             !item?.children?.length ? (
               <NavbarMenuItem key={item.label}>
-                <NextLink className={clsx(linkStyles({ color: 'foreground' }), 'text-[18px] data-[active=true]:text-primary data-[active=true]:font-medium')} color='foreground' href={item.href}>
+                <NextLink
+                  className={clsx(linkStyles({ color: 'foreground' }), 'text-[18px] data-[active=true]:text-primary data-[active=true]:font-medium uppercase')}
+                  color='foreground'
+                  href={item.href}
+                >
                   {item.label}
                 </NextLink>
               </NavbarMenuItem>

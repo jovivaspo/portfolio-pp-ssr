@@ -46,8 +46,8 @@ export const siteConfig: SiteConfig = {
           href: '/photography',
         },
         {
-          label: 'Design',
-          href: '/design',
+          label: 'Designs',
+          href: '/designs',
         },
         {
           label: 'Feat/Colab',

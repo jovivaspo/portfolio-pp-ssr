@@ -1,6 +1,6 @@
-import { CameraIcon } from '@/components/icons/CameraIcon.icon';
-import { PencilIcon } from '@/components/icons/PencilIcon.icon copy';
-import { VideoIcon } from '@/components/icons/VideoIcon.icon';
+import { CameraIcon } from '@/components/moleculas/icons/CameraIcon.icon';
+import { PencilIcon } from '@/components/moleculas/icons/PencilIcon.icon copy';
+import { VideoIcon } from '@/components/moleculas/icons/VideoIcon.icon';
 import Subtitle from '@/components/moleculas/Subtitle/Subtitle.component';
 import { MotionDiv } from '@/components/Motions/MotionDiv';
 const services = [
