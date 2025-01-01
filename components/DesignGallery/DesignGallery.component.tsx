@@ -55,7 +55,7 @@ export const DesignGallery = () => {
     <div className='mx-auto flex flex-col xl:grid grid-cols-1  gap-16  xl:gap-32 mt-36 mb-24 w-[90%]  lg:w-[80%] justify-center'>
       {blocks.map((block, index) => {
         return (
-          <div className='flex flex-col gap-4'>
+          <div className='flex flex-col gap-4' key={index}>
             <h3 className='font-bold text-md'>{block.title}</h3>
             <h6 className=' text-sm'>{block.description}</h6>
             <Carousel
@@ -66,22 +66,22 @@ export const DesignGallery = () => {
               className='relative w-full flex flex-col gap-4 justify-center items-center h-[300px] md:h-[380px] lg:h-[414px]'
               renderArrowPrev={(clickHandler, hasPrev) => {
                 return (
-                  <div
+                  <button
                     className={`${hasPrev ? 'absolute' : 'hidden'} top-0 bottom-0 left-0 flex justify-center items-center p-3 opacity-40 hover:opacity-100 cursor-pointer z-20`}
                     onClick={clickHandler}
                   >
                     <ArrowIcon className='w-9 h-9 text-default-500 rotate-180' />
-                  </div>
+                  </button>
                 );
               }}
               renderArrowNext={(clickHandler, hasNext) => {
                 return (
-                  <div
+                  <button
                     className={`${hasNext ? 'absolute' : 'hidden'} top-0 bottom-0 right-0 flex justify-center items-center p-3 opacity-40 hover:opacity-100 cursor-pointer z-20`}
                     onClick={clickHandler}
                   >
                     <ArrowIcon className='w-9 h-9 text-default-500' />
-                  </div>
+                  </button>
                 );
               }}
               renderIndicator={(onClickHandler, isSelected, label) => {
@@ -103,16 +103,9 @@ export const DesignGallery = () => {
               }}
             >
               {block.items.map((item, index) => {
-                if (item.includes('mp4')) {
-                  return (
-                    <div className='w-full h-full ' key={index}>
-                      <video key={index} src={item} controls className='w-full h-full object-cover' />
-                    </div>
-                  );
-                }
                 return (
                   <div className='w-full h-full ' key={index}>
-                    <img key={index} src={item} loading='lazy' className='w-full h-full object-cover' />
+                    <img alt='' key={index} src={item} loading='lazy' className='w-full h-full object-cover' />
                   </div>
                 );
               })}
