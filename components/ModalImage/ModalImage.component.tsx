@@ -22,7 +22,7 @@ const ModalImage = () => {
 
   const handleClose = () => {
     setIsOpen(false);
-    router.push('/photography');
+    router.push('/photography', { scroll: false });
   };
 
   if (!photoId) return null;

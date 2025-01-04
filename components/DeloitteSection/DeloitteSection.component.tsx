@@ -1,6 +1,9 @@
 import IframeYoutube from '../moleculas/IframeYoutube/IframeYoutube.component';
 
 const listVideoDeloittes = [
+  'https://www.youtube.com/embed/40qWikqx9hY?si=PFqiFQFMmCLiriuT',
+  'https://www.youtube.com/embed/LcXNifMrBtI?si=ekjFHziZinM_qm-G',
+  'https://www.youtube.com/embed/TMihgTLWVqI?si=Rl61dSLEZ1umB--6',
   'https://www.youtube.com/embed/KkM88VkOh-U?si=IeOgeIvML0baflEP',
   'https://www.youtube.com/embed/GV4z9GbN_lA?si=mvqxx_PrY9nTkhmG',
   'https://www.youtube.com/embed/Z3eNm7YTIKc?si=WlfVHHcWCAoaMaOC',
@@ -34,7 +37,7 @@ export const DeloitteSection = () => {
           Selection of the best videos created in collaboration with the Deloitte Brand and Content team. My contribution as film maker, video editor and motion designer.
         </p>
       </div>
-      <div className='mx-auto flex flex-col sm:grid grid-cols-2 gap-16 md:gap-24 mt-24 w-[90%] lg:w-[80%] justify-center'>
+      <div className='mx-auto flex flex-col sm:grid grid-cols-2 gap-16 md:gap-24 mt-24 w-[100%] justify-center'>
         {listVideoDeloittes.map((item, index) => {
           return <IframeYoutube key={index} src={item} />;
         })}

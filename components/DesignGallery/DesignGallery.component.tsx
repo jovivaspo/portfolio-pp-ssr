@@ -52,64 +52,64 @@ const blocks: Block[] = [
 
 export const DesignGallery = () => {
   return (
-    <div className='mx-auto flex flex-col xl:grid grid-cols-1  gap-16  xl:gap-32 mt-36 mb-24 w-[90%]  lg:w-[80%] justify-center'>
+    <div className='mx-auto flex flex-col xl:grid grid-cols-2 gap-16 xl:gap-32 mt-24  w-[100%] justify-center'>
       {blocks.map((block, index) => {
         return (
           <div className='flex flex-col gap-4' key={index}>
-            <h3 className='font-bold text-md'>{block.title}</h3>
-            <h6 className=' text-sm'>{block.description}</h6>
-            <Carousel
-              dynamicHeight={false}
-              showStatus={false}
-              showThumbs={false}
-              key={index}
-              className='relative w-full flex flex-col gap-4 justify-center items-center h-[300px] md:h-[380px] lg:h-[414px]'
-              renderArrowPrev={(clickHandler, hasPrev) => {
-                return (
-                  <button
-                    className={`${hasPrev ? 'absolute' : 'hidden'} top-0 bottom-0 left-0 flex justify-center items-center p-3 opacity-40 hover:opacity-100 cursor-pointer z-20`}
-                    onClick={clickHandler}
-                  >
-                    <ArrowIcon className='w-9 h-9 text-default-500 rotate-180' />
-                  </button>
-                );
-              }}
-              renderArrowNext={(clickHandler, hasNext) => {
-                return (
-                  <button
-                    className={`${hasNext ? 'absolute' : 'hidden'} top-0 bottom-0 right-0 flex justify-center items-center p-3 opacity-40 hover:opacity-100 cursor-pointer z-20`}
-                    onClick={clickHandler}
-                  >
-                    <ArrowIcon className='w-9 h-9 text-default-500' />
-                  </button>
-                );
-              }}
-              renderIndicator={(onClickHandler, isSelected, label) => {
-                const defStyle = {
-                  display: 'inline-block',
-                  marginLeft: 20,
-                  width: '10px',
-                  height: '10px',
-                  borderRadius: '100%',
-                  backgroundColor: 'gray',
-                  cursor: 'pointer',
-                };
-                const style = isSelected ? { ...defStyle, backgroundColor: 'black' } : { ...defStyle };
-                return (
-                  <div style={style} onClick={onClickHandler} onKeyDown={onClickHandler} key={index} role='button' tabIndex={0} aria-label={`${label} ${index + 1}`}>
-                    {}
+            <div className='flex flex-col gap-1'>
+              <h3 className='font-bold text-md'>{block.title}</h3>
+              <h6 className='text-xs sm:text-sm h-[2rem]'>{block.description}</h6>
+            </div>
+
+            {/* Contenedor principal del carrusel con aspect ratio fijo */}
+            <div className='relative w-full aspect-[16/9]'>
+              <Carousel
+                dynamicHeight={false}
+                showStatus={false}
+                showThumbs={false}
+                key={index}
+                className='absolute inset-0 w-full h-full'
+                renderArrowPrev={(clickHandler, hasPrev) => {
+                  return (
+                    <button
+                      className={`${hasPrev ? 'absolute' : 'hidden'} top-0 bottom-0 left-0 flex justify-center items-center p-3 opacity-40 hover:opacity-100 cursor-pointer z-20`}
+                      onClick={clickHandler}
+                    >
+                      <ArrowIcon className='w-9 h-9 text-default-500 rotate-180' />
+                    </button>
+                  );
+                }}
+                renderArrowNext={(clickHandler, hasNext) => {
+                  return (
+                    <button
+                      className={`${hasNext ? 'absolute' : 'hidden'} top-0 bottom-0 right-0 flex justify-center items-center p-3 opacity-40 hover:opacity-100 cursor-pointer z-20`}
+                      onClick={clickHandler}
+                    >
+                      <ArrowIcon className='w-9 h-9 text-default-500' />
+                    </button>
+                  );
+                }}
+                renderIndicator={(onClickHandler, isSelected, label) => {
+                  const defStyle = {
+                    display: 'inline-block',
+                    marginLeft: 20,
+                    width: '10px',
+                    height: '10px',
+                    borderRadius: '100%',
+                    backgroundColor: 'gray',
+                    cursor: 'pointer',
+                  };
+                  const style = isSelected ? { ...defStyle, backgroundColor: 'black' } : { ...defStyle };
+                  return <div style={style} onClick={onClickHandler} onKeyDown={onClickHandler} key={index} role='button' tabIndex={0} aria-label={`${label} ${index + 1}`} />;
+                }}
+              >
+                {block.items.map((item, index) => (
+                  <div className='relative w-full aspect-[16/9]' key={index}>
+                    <img alt='' src={item} loading='lazy' className='absolute inset-0 w-full h-full object-contain bg-white' />
                   </div>
-                );
-              }}
-            >
-              {block.items.map((item, index) => {
-                return (
-                  <div className='w-full h-full ' key={index}>
-                    <img alt='' key={index} src={item} loading='lazy' className='w-full h-full object-cover' />
-                  </div>
-                );
-              })}
-            </Carousel>
+                ))}
+              </Carousel>
+            </div>
           </div>
         );
       })}

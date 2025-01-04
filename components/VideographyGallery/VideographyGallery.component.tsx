@@ -2,7 +2,7 @@
 
 import { VideoRevI } from '@/types/VideRev';
 import { useState } from 'react';
-import { IframeVimeo } from '../moleculas/IframeVimeo/IframeVimeo';
+import { IframeVimeo } from '../moleculas/IframeVimeo/IframeVimeo.component';
 import IframeYoutube from '../moleculas/IframeYoutube/IframeYoutube.component';
 import { VideoItemRevolution } from '../VideoItemRevolution/VideoItemRevolution.component';
 
@@ -73,7 +73,7 @@ export const GalleryVideography = () => {
   const [videoSelect, setVideoSelect] = useState(-1);
 
   return (
-    <div className='mx-auto flex flex-col sm:grid grid-cols-2 gap-16 md:gap-24 mt-36 w-[90%] lg:w-[80%] justify-center'>
+    <div className='mx-auto flex flex-col sm:grid grid-cols-2 gap-16 md:gap-24 mt-24 w-[90%] justify-center'>
       {items.map((item, index) => {
         return (
           <div key={index} className='w-full ' style={item.style}>

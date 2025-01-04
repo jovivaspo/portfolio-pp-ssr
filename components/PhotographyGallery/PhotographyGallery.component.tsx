@@ -8,10 +8,10 @@ export default async function PhotographyGallery() {
   const imageData = await photographyGalleryService.getImages();
 
   return (
-    <div className='w-full h-full grid grid-cols-1 md:grid-cols-2 gap-8'>
+    <div className='w-full h-full grid grid-cols-1 md:grid-cols-2 gap-8 mt-24'>
       {imageData.map(({ title, id, link }) => (
         <div key={id} className='relative group flex flex-col gap-2'>
-          <Link href={`/photography?photoId=${id}`} className='absolute z-10 top-3 right-2 cursor-pointer text-default-500 opacity-60 hover:opacity-100 hover:text-default-500'>
+          <Link href={`/photography?photoId=${id}`} scroll={false} className='absolute z-10 top-3 right-2 cursor-pointer text-default-500 opacity-60 hover:opacity-100 hover:text-default-500'>
             <FullScreenIcon size={20} />
           </Link>
           <Link href={link} className='absolute top-3 left-2 cursor-pointer z-10 text-default-500 opacity-60 hover:opacity-100 hover:text-default-500' target='_blank'>

@@ -22,7 +22,7 @@ const portfolioItems = [
     alt: 'Feat/Collaboration - Pablo Pocostales Professional Motion Graphics Designer & Filmmaker',
     title: 'Feat/Collaboration',
     image: 'https://res.cloudinary.com/dme5pqzrj/image/upload/v1698424080/portafolio-pp/header-feat-collaboration_zahc6o.jpg',
-    link: 'feat-collaboration',
+    link: 'colab',
   },
   {
     id: 4,
@@ -34,8 +34,11 @@ const portfolioItems = [
 ];
 export default function FeatureWorkSection() {
   return (
-    <section className='container mx-auto flex flex-col gap-16 p-6 py-20'>
-      <Subtitle subtitle='Feature Work' className='text-center' />
+    <section className='container mx-auto flex flex-col gap-16'>
+      <div className='my-2 flex flex-col gap-2'>
+        <Subtitle subtitle='Welcome to my creative world' className='text-center' />
+        <h3 className='text-center text-my-gray'>Based in Luxembourg, I specialize in creating stunning visuals that tell your story through photography and videography</h3>
+      </div>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
         {portfolioItems.map((item, index) => (
           <MotionDiv key={item.id} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: index * 0.1 }} viewport={{ once: true }}>

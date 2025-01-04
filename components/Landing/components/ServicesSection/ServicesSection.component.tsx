@@ -23,9 +23,12 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section className='py-20'>
+    <section>
       <div className='container mx-auto px-4 flex flex-col gap-16'>
-        <Subtitle subtitle='Services' className='text-center' />
+        <div className='my-2 flex flex-col gap-2'>
+          <Subtitle subtitle='Services' className='text-center' />
+          <h3 className='text-center text-my-gray'>From concept to final cut, I create compelling short films, documentaries, and corporate videos that captivate audiences.</h3>
+        </div>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
           {services.map((service, index) => (
             <MotionDiv
