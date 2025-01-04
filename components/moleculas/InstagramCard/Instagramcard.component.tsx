@@ -6,6 +6,7 @@ export const InstagramCard: React.FC<Props> = ({ link, src }) => {
   return (
     <div className='relative cursor-pointer'>
       <a
+        rel='noopener noreferrer'
         href={link}
         target='_blank'
         style={{
@@ -17,15 +18,15 @@ export const InstagramCard: React.FC<Props> = ({ link, src }) => {
       </a>
       <div className='bg-white border rounded-sm max-w-md min-w-[286px] min-h-[263px] md:min-w-[448px] md:min-h-[354px]'>
         <div className='flex items-center px-4 py-3'>
-          <img loading='lazy' className='h-8 w-8 rounded-full' src='https://res.cloudinary.com/dme5pqzrj/image/upload/f_auto/v1698439516/portafolio-pp/deloitte_bzrq4e.jpg' />
+          <img alt='Deloitte logo' loading='lazy' className='h-8 w-8 rounded-full' src='https://res.cloudinary.com/dme5pqzrj/image/upload/f_auto/v1698439516/portafolio-pp/deloitte_bzrq4e.jpg' />
           <div className='ml-3 '>
             <span className='text-sm font-semibold antialiased block leading-tight'>deloittelu</span>
             <span className='text-gray-600 text-xs block'>Deloitte Luxembourg</span>
           </div>
         </div>
-        <a href={link} target='_blank' className='w-full h-full bg-my-gray'>
+        <a href={link} target='_blank' className='w-full h-full bg-my-gray' rel='noreferrer'>
           {' '}
-          <img src={src} loading='lazy' />
+          <img src={src} loading='lazy' alt='Deloitte instagram' />
         </a>
 
         <div className='flex items-center justify-between mx-4 mt-3 mb-2'>
@@ -35,9 +36,9 @@ export const InstagramCard: React.FC<Props> = ({ link, src }) => {
             </svg>
             <svg fill='#262626' height='24' viewBox='0 0 48 48' width='24'>
               <path
-                clip-rule='evenodd'
+                clipRule='evenodd'
                 d='M47.5 46.1l-2.8-11c1.8-3.3 2.8-7.1 2.8-11.1C47.5 11 37 .5 24 .5S.5 11 .5 24 11 47.5 24 47.5c4 0 7.8-1 11.1-2.8l11 2.8c.8.2 1.6-.6 1.4-1.4zm-3-22.1c0 4-1 7-2.6 10-.2.4-.3.9-.2 1.4l2.1 8.4-8.3-2.1c-.5-.1-1-.1-1.4.2-1.8 1-5.2 2.6-10 2.6-11.4 0-20.6-9.2-20.6-20.5S12.7 3.5 24 3.5 44.5 12.7 44.5 24z'
-                fill-rule='evenodd'
+                fillRule='evenodd'
               ></path>
             </svg>
             <svg fill='#262626' height='24' viewBox='0 0 48 48' width='24'>
