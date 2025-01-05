@@ -8,9 +8,9 @@ export default function DesignsPage() {
 
       <div className='w-full flex flex-col justify-center items-center mt-24 px-8'>
         <div className='my-2 flex flex-col gap-2'>
-          <h2 className='text-center font-bold'>My designs</h2>
+          <h2 className='text-center font-bold'>Designs</h2>
 
-          <h3 className='text-center text-my-gray'>A selection of my best work in design. From logos to UI/UX, each design is a reflection of my creativity and attention to detail.</h3>
+          <h3 className='text-center text-my-gray'>A selection of designs created for commercial projects that showcase my creativity.</h3>
           <DesignGallery />
         </div>
       </div>

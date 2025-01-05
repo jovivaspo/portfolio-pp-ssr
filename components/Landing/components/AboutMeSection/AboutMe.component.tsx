@@ -11,7 +11,7 @@ export default async function AboutMeSection() {
       <MotionDiv className='flex flex-col md:flex-row items-center gap-12' initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>
         <div className='md:w-1/2'>
           <Image
-            src='https://res.cloudinary.com/dme5pqzrj/image/upload/v1733740478/portafolio-pp/about_klywm3.jpg'
+            src='https://res.cloudinary.com/dme5pqzrj/image/upload/v1736105560/portafolio-pp/Secondary-image-landing-page-About-me_qeg6mb.jpg'
             alt='About me - Pablo Pocostales Proffesional Motion Graphics Designer & Filmmaker'
             quality={90}
             width={500}

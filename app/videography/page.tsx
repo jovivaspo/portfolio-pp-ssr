@@ -8,11 +8,8 @@ export default function VideographyPage() {
 
       <div className='w-full flex flex-col justify-center items-center mt-24 px-8'>
         <div className='my-2 flex flex-col gap-2'>
-          <h2 className='text-center font-bold'>My Videography Gallery</h2>
-          <h3 className='text-center text-my-gray'>
-            Crafting compelling visual stories through dynamic cinematography and creative direction. From commercial projects to artistic collaborations, each frame is carefully composed to capture
-            your vision.
-          </h3>
+          <h2 className='text-center font-bold'>Videography Gallery</h2>
+          <h3 className='text-center text-my-gray'>Visual creations ranging from dynamic animations to professional recordings.</h3>
         </div>
         <GalleryVideography />
       </div>

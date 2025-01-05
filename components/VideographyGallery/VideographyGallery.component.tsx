@@ -73,7 +73,7 @@ export const GalleryVideography = () => {
   const [videoSelect, setVideoSelect] = useState(-1);
 
   return (
-    <div className='mx-auto flex flex-col sm:grid grid-cols-2 gap-16 md:gap-24 mt-24 w-[90%] justify-center'>
+    <div className='mx-auto flex flex-col sm:grid grid-cols-2 gap-16 md:gap-24 mt-24 w-[100%] justify-center'>
       {items.map((item, index) => {
         return (
           <div key={index} className='w-full ' style={item.style}>

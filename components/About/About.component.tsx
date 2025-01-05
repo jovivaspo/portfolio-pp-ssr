@@ -29,7 +29,7 @@ export default async function About() {
 
         <p className='my-8 text-sm w-full text-start'>{content.content}</p>
       </div>
-      <a href='./CV-Pablo-Pocostales-2023.pdf' target='_blank' rel='noopener noreferrer' download>
+      <a href='./CV-PabloPocostales-2024.pdf' target='_blank' rel='noopener noreferrer' download>
         <button className='btn-download'>
           <p>Download here...</p>
         </button>

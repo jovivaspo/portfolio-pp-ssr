@@ -31,7 +31,7 @@ export const HeaderHero = ({ src, title, type }: Props) => {
         )}
         <div className='absolute inset-0 bg-black/40' />
       </div>
-      <h1 className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl uppercase'>{title}</h1>
+      <h1 className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-3xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl uppercase'>{title}</h1>
     </section>
   );
 };

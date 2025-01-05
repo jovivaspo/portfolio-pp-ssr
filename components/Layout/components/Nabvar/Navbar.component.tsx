@@ -3,13 +3,14 @@ import { link as linkStyles } from '@nextui-org/theme';
 import clsx from 'clsx';
 import NextLink from 'next/link';
 
-import { Logo } from '@/components/icons';
+import { LogoAnimated } from '@/components/LogoAnimated/LogoAnimated.component';
 import { FlickrIcon } from '@/components/moleculas/icons/FlickrIcon.icon';
 import { GmailIcon } from '@/components/moleculas/icons/Gmail.icon';
 import { LinkdinIcon } from '@/components/moleculas/icons/Linkedin.icon';
 import { ThemeSwitch } from '@/components/theme-switch';
 import { siteConfig } from '@/config/site';
 import { NavItemWithChildren } from '@/models/config/site';
+import Link from 'next/link';
 import { Submenu } from './Submenu/Submenu.component';
 
 export const Navbar = () => {
@@ -18,10 +19,10 @@ export const Navbar = () => {
       <NavbarContent className='basis-1/5 sm:basis-full' justify='start'>
         <NavbarBrand as='li' className='gap-3 max-w-fit'>
           <NextLink className='flex justify-start items-center gap-1' href='/'>
-            <Logo />
-            <p className='font-bold text-inherit'>PP_</p>
+            <LogoAnimated />
           </NextLink>
         </NavbarBrand>
+
         <ul className='hidden lg:flex gap-8 justify-start ml-2'>
           {siteConfig.navItems.map((item) =>
             !item?.children?.length ? (
@@ -61,11 +62,18 @@ export const Navbar = () => {
           )}
         </div>
       </NavbarMenu>
+
       <NavbarContent className='hidden lg:flex basis-1 pl-4' justify='end'>
         <ThemeSwitch />
-        <LinkdinIcon size={24} className='text-default-500' />
-        <FlickrIcon size={24} className='text-default-500' />
-        <GmailIcon size={24} className='text-default-500' />
+        <Link href={'https://www.linkedin.com/in/pablopocostales/'} target='_blank'>
+          <LinkdinIcon size={24} className='text-default-500' />
+        </Link>
+        <Link href={'https://www.flickr.com/photos/pocostales'} target='_blank'>
+          <FlickrIcon size={24} className='text-default-500' />
+        </Link>
+        <Link href={'/contact'}>
+          <GmailIcon size={24} className='text-default-500' />
+        </Link>
       </NavbarContent>
     </NextUINavbar>
   );

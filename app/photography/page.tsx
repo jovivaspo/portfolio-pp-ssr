@@ -10,9 +10,9 @@ export default function PhotographyPage() {
 
       <div className='w-full flex flex-col justify-center items-center mt-24 px-8'>
         <div className='my-2 flex flex-col gap-2'>
-          <h2 className='text-center font-bold'>My Photography Gallery</h2>
+          <h2 className='text-center font-bold'>Photography Gallery</h2>
 
-          <h3 className='text-center text-my-gray'>A selection of my best work in photography</h3>
+          <h3 className='text-center text-my-gray'>A Gallery of the best photos selected from my extensive photography album.</h3>
         </div>
         <PhotographyGallery />
       </div>

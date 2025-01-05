@@ -21,7 +21,7 @@ export default function HeroSection() {
           <br />
           POCOSTALES
         </MotionH1>
-        <MotionParagraph initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.7, duration: 0.8 }} className='mt-6 text-lg text-gray-200 sm:text-xl'>
+        <MotionParagraph initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.7, duration: 0.8 }} className='text-center mt-6 text-lg text-gray-200 sm:text-xl'>
           Motion Graphics Designer & Filmmaker
         </MotionParagraph>
         <MotionDiv initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.9, duration: 0.8 }} className='mt-8'>

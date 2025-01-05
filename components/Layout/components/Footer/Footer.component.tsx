@@ -26,7 +26,7 @@ const menuFooter = [
 ];
 export const Footer = () => {
   return (
-    <footer className='w-full min-h-[200px] flex flex-col gap-16 mt-32 pb-8'>
+    <footer className='w-full min-h-[200px] flex flex-col gap-16 mt-24 md:mt-32 pb-8'>
       <ul className='w-full flex flex-col items-center justify-center gap-8 p-4 md:flex-row'>
         {menuFooter.map((item, index) => {
           return (
@@ -39,20 +39,20 @@ export const Footer = () => {
         })}
       </ul>
 
-      <div className='w-full flex flex-col md:flex-row items-center justify-between'>
+      <div className='w-full flex flex-col md:flex-row gap-6 items-center justify-between'>
         <ul className='w-full flex justify-center gap-5'>
           <li className='w-[30px] h-[30px] rounded-full flex justify-center items-center transition-all hover:scale-110'>
-            <Link href={'https://www.linkedin.com/in/pablo-pocostales/'} target='_blank'>
+            <Link href={'https://www.linkedin.com/in/pablopocostales/'} target='_blank'>
               <LinkdinIcon size={24} />
             </Link>
           </li>
           <li className='w-[30px] h-[30px] rounded-full flex justify-center items-center transition-all hover:scale-110'>
-            <Link href={'https://www.linkedin.com/in/pablo-pocostales/'} target='_blank'>
+            <Link href={'https://www.flickr.com/photos/pocostales'} target='_blank'>
               <FlickrIcon size={24} />
             </Link>
           </li>
           <li className='w-[30px] h-[30px] rounded-full flex justify-center items-center transition-all hover:scale-110'>
-            <Link href={'https://www.linkedin.com/in/pablo-pocostales/'} target='_blank'>
+            <Link href={'/contact'}>
               <GmailIcon size={24} />
             </Link>
           </li>
